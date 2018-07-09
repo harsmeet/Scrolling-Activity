@@ -1,13 +1,15 @@
 package com.example.harsmeet.scrollingactivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -19,14 +21,41 @@ public class ScrollingActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setImageResource(R.drawable.ic_interaction2);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ScrollingActivity.this);
+                LayoutInflater inflater = ScrollingActivity.this.getLayoutInflater();
+                dialogBuilder.setTitle("Update Interaction");
+                dialogBuilder.setIcon(R.drawable.ic_interaction2);
+
+                dialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                    }
+                });
+
+                dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                });
+
+                AlertDialog alertDialog = dialogBuilder.create();
+                alertDialog.show();
+
             }
         });
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
