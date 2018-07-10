@@ -12,7 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
+<<<<<<< HEAD
         android:background="@drawable/cheese_2"
+=======
+>>>>>>> 46b91ad3db27dba96f7ed319c6559ffc3a30c454
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -36,6 +39,7 @@
 
     <include layout="@layout/content_scrolling" />
 
+<<<<<<< HEAD
 
     <android.support.design.widget.FloatingActionButton
     android:id="@+id/fab"
@@ -48,4 +52,15 @@
         android:focusable="true"
         android:clickable="true"/>
 
+=======
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end">
+
+    </android.support.design.widget.FloatingActionButton>
+>>>>>>> 46b91ad3db27dba96f7ed319c6559ffc3a30c454
 </android.support.design.widget.CoordinatorLayout>

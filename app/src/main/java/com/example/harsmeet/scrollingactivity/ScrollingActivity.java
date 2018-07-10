@@ -16,6 +16,7 @@ public class ScrollingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
 
         setContentView(R.layout.activity_scrolling);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -23,6 +24,14 @@ public class ScrollingActivity extends AppCompatActivity {
         toolbar.setTitle("Scrolling Activity");
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setImageResource(R.drawable.ic_interaction2);
+=======
+        setContentView(R.layout.activity_scrolling);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setImageResource(R.drawable.ic_interaction2);
+>>>>>>> 46b91ad3db27dba96f7ed319c6559ffc3a30c454
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

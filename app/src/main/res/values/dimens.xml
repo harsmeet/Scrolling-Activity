@@ -1,5 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <dimen name="app_bar_height">280dp</dimen>
+=======
+    <dimen name="app_bar_height">180dp</dimen>
+>>>>>>> 46b91ad3db27dba96f7ed319c6559ffc3a30c454
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
 </resources>
