@@ -12,11 +12,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,7 +53,7 @@ public class ScrollingActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                    Toast.makeText(ScrollingActivity.this,"Ok Button Pressed !",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ScrollingActivity.this, "Ok Button Pressed !", Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -76,9 +77,18 @@ public class ScrollingActivity extends AppCompatActivity {
         TextView phoneNumber = (TextView) findViewById(R.id.et_number);
         TextView email = (TextView) findViewById(R.id.et_email);
 
-        phoneNumber.setText("Phone Number: " + "9999999999");
+//        phoneNumber.setText("Phone Number: " + "9999999999");
+        //        email.setText("Email Id: " + "testing@rediff.com");
 
-        email.setText("Email Id: " + "testing@rediff.com");
+//   underline textView
+        SpannableString content = new SpannableString("Contact Number: " + "9815098150");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        phoneNumber.setText(content);
+
+
+        SpannableString content2 = new SpannableString("Email Id: " + "testing@rediff.com");
+        content2.setSpan(new UnderlineSpan(), 0, content2.length(), 0);
+        email.setText(content2);
 
 
         phoneNumber.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +96,7 @@ public class ScrollingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(ScrollingActivity.this," Phone Number Clicked !",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScrollingActivity.this, " Phone Number Clicked !", Toast.LENGTH_SHORT).show();
 
                 call();
 
@@ -101,7 +111,7 @@ public class ScrollingActivity extends AppCompatActivity {
                 try {
 
 
-                    Toast.makeText(ScrollingActivity.this," Email Id Clicked !",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ScrollingActivity.this, " Email Id Clicked !", Toast.LENGTH_SHORT).show();
 
 
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "testing@rediff.com"));
