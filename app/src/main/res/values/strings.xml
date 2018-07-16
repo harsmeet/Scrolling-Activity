@@ -65,10 +65,6 @@
         "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
 
         "Responsive elevation and dynamic elevation offsets.\n\n"
-
-<<<<<<< HEAD
-
-=======
         "Some component types have responsive elevation, meaning they change elevation in response "
         "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
         "changes are consistently implemented using dynamic elevation offsets.\n"
@@ -91,7 +87,7 @@
         "On the layout level, design your app layout to minimize opportunities for interference. "
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
->>>>>>> 46b91ad3db27dba96f7ed319c6559ffc3a30c454
+
     </string>
     <string name="action_settings">Settings</string>
 </resources>
