@@ -44,10 +44,15 @@ public class ScrollingActivity extends AppCompatActivity {
                 dialogBuilder.setTitle("Update Interaction");
                 dialogBuilder.setIcon(R.drawable.ic_interaction2);
 
+                final View dialogView = inflater.inflate(R.layout.interaction_dialog_box, null);
+                dialogBuilder.setView(dialogView);
+
+
                 dialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
+                    Toast.makeText(ScrollingActivity.this,"Ok Button Pressed !",Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -87,6 +92,8 @@ public class ScrollingActivity extends AppCompatActivity {
 
             }
         });
+
+//        send email through intent
 
         email.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,9 +148,6 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         }
     }
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

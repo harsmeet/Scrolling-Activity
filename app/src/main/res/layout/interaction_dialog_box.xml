@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relativeLayout_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:background="@color/lightPrimary"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Let us know about your interaction"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:hint="Update us about your Interaction.."
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/spinner_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_comment"
+            android:gravity="end"
+            android:layout_marginTop="4dp"
+            android:spinnerMode="dialog"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/spinner_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_mode"
+            android:gravity="end"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:spinnerMode="dialog"
+            android:textSize="12sp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView_post_comment"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/spinner_mode"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:background="#000000"-->
+        <!--android:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!--android:padding="6dp"-->
+        <!--android:text="Update Interaction"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="12sp"-->
+        <!--android:textStyle="bold" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>
